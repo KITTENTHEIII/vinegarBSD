@@ -1,9 +1,9 @@
 # <img src="data/icons/vinegar.svg" alt="Vinegar logo" height="64px"> VinegarBSD
 
 Compatibility List:
-+ FreeBSD 14.3+ ✅
-+ Wine 10+ ✅
-+ Linuxulator ✅
++ FreeBSD 14.3+ ✅ (May work on older version)
++ Wine 10+ ✅ (Must have)
++ Linuxulator ✅ (Must have)
 + OpenBSD ❌
 + NetBSD ❌
 ___________________________________________________________
