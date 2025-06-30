@@ -1,4 +1,4 @@
-# <img src="data/icons/vinegar.svg" alt="Vinegar logo" height="64px"> Vinegar
+# <img src="data/icons/vinegar.svg" alt="Vinegar logo" height="64px"> VinegarBSD
 
 [![Pipeline Status][pipeline_img    ]][pipeline    ]
 [![Version        ][version_img     ]][version     ]
@@ -6,7 +6,7 @@
 [![Report Card    ][goreportcard_img]][goreportcard]
 [![Discord Server ][discord_img     ]][discord     ]
 
-An open-source, configurable, fast bootstrapper for running Roblox Studio on Linux.
+An open-source, configurable, fast bootstrapper for running Roblox Studio on FreeBSD.
 
 [pipeline]:     https://github.com/vinegarhq/vinegar/actions/workflows/build.yml
 [pipeline_img]: https://img.shields.io/github/actions/workflow/status/vinegarhq/vinegar/build.yml?style=flat-square&label=build%20%26%20tests
