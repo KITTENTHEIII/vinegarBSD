@@ -1,9 +1,11 @@
 # <img src="data/icons/vinegar.svg" alt="Vinegar logo" height="64px"> VinegarBSD
 
-Tested with:
-+ FreeBSD 14.3
-+ Wine 10
-+ Linuxulator
+Compatibility List:
++ FreeBSD 14.3+ ✅
++ Wine 10+ ✅
++ Linuxulator ✅
++ OpenBSD ❌
++ NetBSD ❌
 ___________________________________________________________
 
 [![Pipeline Status][pipeline_img    ]][pipeline    ]
