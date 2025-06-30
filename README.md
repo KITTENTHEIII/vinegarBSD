@@ -1,5 +1,11 @@
 # <img src="data/icons/vinegar.svg" alt="Vinegar logo" height="64px"> VinegarBSD
 
+Tested with:
++ FreeBSD 14.3
++ Wine 10
++ Linuxulator
+___________________________________________________________
+
 [![Pipeline Status][pipeline_img    ]][pipeline    ]
 [![Version        ][version_img     ]][version     ]
 [![Flathub        ][flathub_img     ]][flathub     ]
