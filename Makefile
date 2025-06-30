@@ -2,7 +2,7 @@
 
 VERSION = v1.8.1
 
-PREFIX      ?= /usr
+PREFIX      ?= /usr/local
 DATAPREFIX  = $(PREFIX)/share/vinegar
 APPPREFIX   = $(PREFIX)/share/applications
 ICONPREFIX  = $(PREFIX)/share/icons/hicolor
@@ -29,6 +29,11 @@ layer/libVkLayer_VINEGAR_VinegarLayer.so:
 	$(CXX) -shared -fPIC `pkg-config --cflags vulkan` layer/vinegar_layer.cpp -o $@
 
 install: all
+	install -d $(DESTDIR)$(DATAPREFIX)
+	install -d $(DESTDIR)$(APPPREFIX)
+	install -d $(DESTDIR)$(ICONPREFIX)/scalable/apps
+	install -d $(DESTDIR)$(LAYERPREFIX)
+
 	install -Dm755 vinegar $(DESTDIR)$(PREFIX)/bin/vinegar
 	install -Dm644 data/org.vinegarhq.Vinegar.metainfo.xml $(DESTDIR)$(PREFIX)/share/metainfo/org.vinegarhq.Vinegar.metainfo.xml
 	install -Dm644 data/desktop/vinegar.desktop $(DESTDIR)$(APPPREFIX)/org.vinegarhq.Vinegar.desktop
@@ -37,7 +42,8 @@ install: all
 	install -Dm644 data/icons/roblox-studio.svg $(DESTDIR)$(ICONPREFIX)/scalable/apps/org.vinegarhq.Vinegar.studio.svg
 	install -Dm644 layer/libVkLayer_VINEGAR_VinegarLayer.so $(DESTDIR)$(LIBPREFIX)/libVkLayer_VINEGAR_VinegarLayer.so
 	install -Dm644 layer/VkLayer_VINEGAR_VinegarLayer.json $(DESTDIR)$(LAYERPREFIX)/VkLayer_VINEGAR_VinegarLayer.json
-	gtk-update-icon-cache $(DESTDIR)$(ICONPREFIX) ||:
+
+	gtk-update-icon-cache $(DESTDIR)$(ICONPREFIX) || true
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/vinegar \
@@ -51,5 +57,5 @@ uninstall:
 
 clean:
 	rm -f vinegar layer/libVkLayer_VINEGAR_VinegarLayer.so
-	
+
 .PHONY: all install uninstall clean
